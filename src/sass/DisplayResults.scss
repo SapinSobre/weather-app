@@ -1,5 +1,16 @@
-.displayResults{
-    width: 80vw;
+.cityValuesBox{
+    width: 100vw;
     height: 80vh;
-    background-color: lightblue;
+    background-color: black;
+    opacity: 0.5;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .cityValuesBox_input{
+        font-size: 3em;
+      
+        color: white;
+        opacity: 1;
+        font-weight: bold
+    }
 }

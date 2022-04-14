@@ -18,7 +18,7 @@ const Form = ({photo, setPhoto, cityvalue, setCityvalue}) => {
             
             axios.get(`https://api.unsplash.com/search/photos?client_id=${appidUnsplash}&page=1&query=${cityval}`)
             .then((im) => {               
-                setPhoto(im.data.results[0].urls.thumb)                                      
+                setPhoto(im.data.results[0].urls.regular)                                      
             })
          
             axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityval}&appid=${appid}`) 
