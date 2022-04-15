@@ -1,16 +1,24 @@
 .cityValuesBox{
-    width: 100vw;
-    height: 80vh;
-    background-color: black;
-    opacity: 0.5;
+    width: auto;
+    height: 65vh;
+    background-color: black;    
     text-align: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    .cityValuesBox_input{
-        font-size: 3em;
-      
+    background-size: contain;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    list-style-type: none;
+    padding-top: 5vh;
+    .cityValuesBox_val{
+        font-size: 2em;      
         color: white;
         opacity: 1;
-        font-weight: bold
+        padding-top: 2vh;
+        padding-left: 20vw;
+        &:first-child{
+            font-weight: bold;
+            font-size: 2.2em;
+            padding-bottom: 2vh;
+        }
     }
 }
