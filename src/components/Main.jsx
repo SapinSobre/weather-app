@@ -8,9 +8,9 @@ const Main = () => {
     const [photo, setPhoto] = useState()
     const [cityvalue, setCityvalue] = useState([])
     return(
-        <div className="section">
+        <div className="main">
             <Form cityForecastValue={cityForecastValue} setCityForecastValue={setCityForecastValue} photo={photo} setPhoto={setPhoto} cityvalue={cityvalue} setCityvalue={setCityvalue}/>   
-            <DisplayResults cityForecastValue={cityForecastValue} setCityForecastValue={setCityForecastValue} photo={photo} setPhoto={setPhoto} cityvalue={cityvalue} setCityvalue={setCityvalue}/>
+            <DisplayResults cityForecastValue={cityForecastValue} photo={photo} cityvalue={cityvalue}/>
         </div>
     )
 }

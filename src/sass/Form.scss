@@ -1,10 +1,20 @@
 .form{
-    width: 20vw;
-    margin-left: 35vw;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    .form_cityInput{
-        width: 20vw;
-        height: 5vh;
+    width: 50vw;
+    margin-left: 3vw;
+    margin-top: 4vh;  
+    margin-bottom: -5vh;
+    display: flex;
+    flex-direction: row; 
+    .form_label{
+        color: blue;
+        margin-right: 2vw;
+        .form_cityInput{
+            width: 8vw;
+            height: 4vh;
+            border-radius: 0.5vw 0.5vw;
+            padding-left: 0.5vw;
+            margin-left: 1vw;
+        }
     }
+    
 }

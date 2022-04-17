@@ -1,24 +1,100 @@
-.cityValuesBox{
-    width: auto;
-    height: 65vh;
-    background-color: black;    
+.weather{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100vw;
+    margin-top: -1.5vh;
+    padding-bottom: 2vh;
     text-align: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    list-style-type: none;
-    padding-top: 5vh;
-    .cityValuesBox_val{
-        font-size: 2em;      
-        color: white;
-        opacity: 1;
-        padding-top: 2vh;
-        padding-left: 20vw;
-        &:first-child{
+    .cityPhotoBox{
+        width: 25vw;
+        padding-left: 3vw;
+        padding-top: 10vh;
+        padding-bottom: 2vh;
+        .cityPhoto{
+           width: 100%;
+        }
+    }     
+    .currentWeather_list{
+        width: 10vw;       
+        text-align: left;          
+        list-style-type: none;
+        padding-left: 8vw;
+        padding-right: 4vw;
+        padding-top: 15vh;
+        .currentWeather_location{
+            color: red;
+            font-size: 2em;
             font-weight: bold;
-            font-size: 2.2em;
-            padding-bottom: 2vh;
+        }
+        .currentWeather_title{
+            color: lightblue;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: -3vh;
+        }
+        .currentWeather_title_date{
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: -1vh;
+        }
+        .currentWeather_item{
+            font-size: 1.2em;      
+            color: white; 
+            .currentWeather_icon{
+                width: 5vw;
+                height: auto;
+                padding-top: 0.8vh;
+              
+            }
+            .currentWeather_description{
+                font-size: 0.7em; 
+                color: lightblue;
+                margin-top: -3vh;
+            }                  
         }
     }
+    .forecastList{
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 90vh;
+        .forecastWeather_list{  
+            border: 0.5px solid white;
+            border-radius: 0.5vw 0.5vw;          
+            list-style-type: none;
+            margin-right: 1vw;
+            padding: 0.5vw 2vw 0vw 2vw;
+            .forecastWeather_title{
+                color: lightblue;
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: -3vh;   
+            }
+            .forecastWeather_title_date{
+                color: white;
+                font-weight: bold;
+                font-size: 1.2em; 
+                margin-bottom: -0.3vh;     
+            }
+            .forecastWeather_item{
+                font-size: 1em;      
+                color: white;  
+                text-align: center; 
+                .forecastWeather_icon{
+                    width: 5vw;
+                    height: auto;
+                    padding-top: 0.8vh;
+                  
+                }
+                .forecastWeather_description{
+                    font-size: 0.7em; 
+                    color: lightblue;
+                    margin-top: -3vh;
+                }          
+            }
+        }
+    }    
 }
