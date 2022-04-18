@@ -17,7 +17,7 @@ const Form = ({cityForecastValue, setCityForecastValue, photo, setPhoto, cityval
         if(event.key === 'Enter'){
 
             setCity(inputRef.current) 
-            let cityval = "tokyo"
+            let cityval = city.value
             
             axios.get(`https://api.unsplash.com/search/photos?client_id=${appidUnsplash}&page=1&query=${cityval}`)
             .then((im) => {               
@@ -40,12 +40,10 @@ const Form = ({cityForecastValue, setCityForecastValue, photo, setPhoto, cityval
                     icon: cit.data.weather[0].icon
                 }     
                 setCityvalue(newCityObject)
-                setLat(newCityObject.lat) 
-                setLon(newCityObject.lon)                                       
+                                                  
             }) 
-            axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${appid}&units=metric`)
-            .then((forecastCit) => {  
-                console.log(forecastCit)               
+            axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityvalue.lat}&lon=${cityvalue.lon}&exclude=minutely,hourly&appid=${appid}&units=metric`)
+            .then((forecastCit) => {                
                 for(let i = 0; i < 5; i++){
                     let newForecastCityObject = {
                         dayTemp : forecastCit.data.daily[i].temp.day.toFixed(),
@@ -55,12 +53,11 @@ const Form = ({cityForecastValue, setCityForecastValue, photo, setPhoto, cityval
                         icon : forecastCit.data.daily[i].weather[0].icon,
                         description : forecastCit.data.daily[i].weather[0].description
                     }   
-                    forecastTab.push(newForecastCityObject)  
-                    console.log(forecastTab)     
+                    forecastTab.push(newForecastCityObject)       
                 }                      
                 setCityForecastValue(forecastTab) 
-            }) 
-            console.log(cityForecastValue)      
+                console.log(cityForecastValue)
+            })     
         };
     } 
 
